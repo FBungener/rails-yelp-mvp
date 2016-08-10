@@ -1,0 +1,18 @@
+  <div class="container">
+    <div class="row text-center">
+  <!--     div.col-sm-6 -->
+      <h1 style="font-family: 'Lobster', cursive;">Our restaurants</h1>
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <ul class="restaurant_list">
+          <% @restaurants.each do |restaurant| %>
+            <div class="restaurant_card hvr-grow">
+              <li><h3> <%= link_to restaurant.name, restaurant_path(restaurant.id)%> </h3></li>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
